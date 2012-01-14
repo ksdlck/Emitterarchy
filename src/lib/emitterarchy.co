@@ -4,7 +4,7 @@ ex = typeof exports is \undefined and window or exports
 
 class ex.Emitterarchy extends EventEmitter2
   !(opts) ->
-    super wildcard: true
+    super (opts || {}) <<< wildcard: true
   define: (ev, par) ->
     @.@defs[ev] = par
     @
