@@ -1,8 +1,8 @@
 {EventEmitter2} = require \eventemitter2
 
-exports = typeof exports is \undefined and window or exports
+ex = typeof exports is \undefined and window or exports
 
-class exports.Emitterarchy extends EventEmitter2
+class ex.Emitterarchy extends EventEmitter2
   !(opts) ->
     super wildcard: true
   define: (ev, par) ->
