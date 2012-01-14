@@ -1,0 +1,33 @@
+{Emitterarchy} = require \../lib/emitterarchy
+
+e = new Emitterarchy ()
+
+console.log "----- PART 1 -----"
+e.on \test ! ->
+  console.log "got test"
+e.emit \test
+
+console.log "----- PART 2 -----"
+e
+  .define \end
+  .define \error \end
+  .define \done \end
+e.on \end ! ->
+  console.log "got end"
+e.emit \error
+
+console.log "----- PART 3 -----"
+e
+  .define \transient \error
+  .define \fatal \error
+e.on \error ! ->
+  console.log "got error"
+e.emit \transient
+
+console.log "----- PART 4 -----"
+e.define \timeout \transient
+e.on \transient ! ->
+  console.log "got transient"
+e.on \timeout ! ->
+  console.log "got timeout"
+e.emit \timeout

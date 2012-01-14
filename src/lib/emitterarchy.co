@@ -1,0 +1,26 @@
+{EventEmitter2} = require \eventemitter2
+
+exports = typeof exports is \undefined and window or exports
+
+class exports.Emitterarchy extends EventEmitter2
+  !(opts) ->
+    super wildcard: true
+  define: (ev, par) ->
+    @.@defs[ev] = par
+    @
+  _nsev: (ev) ->
+    nsev = ev
+    while (ev = @.@defs[ev])
+      #console.log "_nsev: #ev: #nsev"
+      nsev = "#ev.#nsev"
+    nsev
+  on: (ev, lis) ->
+    ev = @_nsev ev
+    super ev, lis
+    super "#ev.**", lis
+    @
+  emit: (ev, ...args) ->
+    ev = @_nsev ev
+    #console.log "emit: #ev"
+    super ev, ...args
+    @
