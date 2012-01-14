@@ -28,7 +28,7 @@ You can emit any event you want, but if an event is not known by the emitter it 
 WARNING
 -------
 
-Only `.on` and `.emit` have been wrapped, and I haven't checked to see whether EventEmitter2 uses these internally for `.onMany` etc.
+Only `.on` and `.emit` have been wrapped, and I haven't checked to see whether EventEmitter2 uses these internally for `.many` etc.
 
 LICENSE
 -------
