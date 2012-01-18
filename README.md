@@ -4,7 +4,7 @@ Emitterarchy
 SYNOPSIS
 --------
 
-Hierarchical events, based on EventEmitter2's namespacing functionality.
+Hierarchical events, based on [Emitting](https://github.com/ksdlck/Emitting)'s namespacing functionality.
 You can emit any event you want, but if an event is not known by the emitter it will be considered a top level event.
 
     em = new Emitterarchy
@@ -24,11 +24,6 @@ You can emit any event you want, but if an event is not known by the emitter it 
       console.log "hmmmmmmmmmmmmmmmmm"
 
     em.emit \hmmm
-
-WARNING
--------
-
-Only `.on` and `.emit` have been wrapped, and I haven't checked to see whether EventEmitter2 uses these internally for `.many` etc.
 
 LICENSE
 -------

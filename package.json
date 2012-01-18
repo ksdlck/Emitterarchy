@@ -2,7 +2,7 @@
   "author": "Karel Sedláček <k@ksdlck.com> (http://ksdlck.com)",
   "name": "Emitterarchy",
   "description": "EventEmitter2 with support for event hierarchies",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/ksdlck/Emitterarchy",
   "repository": {
     "type": "git",
